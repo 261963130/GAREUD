@@ -1,0 +1,62 @@
+cff-version: 1.2.0
+title: "GAREUD: Ground-Aerial RGB--Event UAV Dataset"
+message: "If you use GAREUD, please cite the associated paper."
+type: dataset
+authors:
+  - family-names: Xia
+    given-names: Haoji
+  - family-names: Liu
+    given-names: Siying
+  - family-names: Jin
+    given-names: Jiaqi
+  - family-names: Wang
+    given-names: Sihan
+  - family-names: Huang
+    given-names: Tong
+  - family-names: Han
+    given-names: Xujie
+  - family-names: Wang
+    given-names: Zikai
+  - family-names: Zhong
+    given-names: Yuxing
+  - family-names: Zheng
+    given-names: Hanle
+  - family-names: Cheng
+    given-names: Chen
+  - family-names: Guo
+    given-names: Hao
+  - family-names: Deng
+    given-names: Lei
+year: 2026
+license: CC-BY-NC-4.0
+repository-code: "https://github.com/261963130/GAREUD"
+url: "https://drive.google.com/drive/folders/1WSdUVY31Msf_oUpoDQa9QQLj8btxbZYy?usp=drive_link"
+preferred-citation:
+  type: article
+  title: "Full-Stack UAV Detection Pipeline from Precise RGB--Event Sensing to Efficient Edge Processing"
+  authors:
+    - family-names: Xia
+      given-names: Haoji
+    - family-names: Liu
+      given-names: Siying
+    - family-names: Jin
+      given-names: Jiaqi
+    - family-names: Wang
+      given-names: Sihan
+    - family-names: Huang
+      given-names: Tong
+    - family-names: Han
+      given-names: Xujie
+    - family-names: Wang
+      given-names: Zikai
+    - family-names: Zhong
+      given-names: Yuxing
+    - family-names: Zheng
+      given-names: Hanle
+    - family-names: Cheng
+      given-names: Chen
+    - family-names: Guo
+      given-names: Hao
+    - family-names: Deng
+      given-names: Lei
+  year: 2026
