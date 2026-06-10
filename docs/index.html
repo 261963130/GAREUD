@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GAREUD Dataset</title>
+  <meta name="description" content="GAREUD: Ground-Aerial RGB--Event UAV Dataset for aligned multimodal UAV detection.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="brand">GAREUD</div>
+      <div class="links">
+        <a href="#overview">Overview</a>
+        <a href="#benchmark">Benchmark</a>
+        <a href="#structure">Structure</a>
+        <a href="#download">Download</a>
+        <a href="#citation">Citation</a>
+      </div>
+    </nav>
+    <section class="hero-content">
+      <p class="eyebrow">Ground-Aerial RGB--Event UAV Dataset</p>
+      <h1>Aligned RGB--Event UAV detection from precise sensing to edge evaluation</h1>
+      <p class="lead">A real-world and synthetic benchmark for small-target UAV detection, multimodal fusion, cross-modal alignment, and edge-oriented evaluation.</p>
+      <div class="actions">
+        <a class="button primary" href="https://drive.google.com/drive/folders/1WSdUVY31Msf_oUpoDQa9QQLj8btxbZYy?usp=drive_link">Download GAREUD-Real</a>
+        <a class="button" href="https://github.com/261963130/GAREUD">GitHub</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="overview" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Overview</p>
+        <h2>RGB--Event UAV data for realistic and controlled evaluation</h2>
+      </div>
+      <div class="grid three">
+        <article>
+          <h3>Precise RGB--Event Sensing</h3>
+          <p>GAREUD-Real uses co-axial imaging and microsecond-level trigger synchronization to reduce spatial parallax and establish exposure-level temporal pairing.</p>
+        </article>
+        <article>
+          <h3>Real and Synthetic Subsets</h3>
+          <p>Real-world recordings preserve natural sensing effects, while synthetic data provide native correspondence for controlled perturbation analysis.</p>
+        </article>
+        <article>
+          <h3>Edge-Oriented Benchmark</h3>
+          <p>The dataset supports evaluation of lightweight RGB--Event detection pipelines under ground-to-air and air-to-air acquisition conditions.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="benchmark" class="section tinted">
+      <div class="section-head">
+        <p class="eyebrow">Benchmark</p>
+        <h2>Dataset statistics</h2>
+      </div>
+      <div class="stats">
+        <div><strong>4.1 h</strong><span>real-world recordings</span></div>
+        <div><strong>14 min</strong><span>synthetic data</span></div>
+        <div><strong>G2A + A2A</strong><span>viewpoints</span></div>
+        <div><strong>10--160,000 lux</strong><span>measured illumination</span></div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Subset</th>
+            <th>Domain</th>
+            <th>Viewpoints</th>
+            <th>Resolution</th>
+            <th>UAV Types</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>GAREUD-Real</td>
+            <td>Real-world</td>
+            <td>G2A and A2A</td>
+            <td>1280 x 720</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>GAREUD-Sim</td>
+            <td>Synthetic</td>
+            <td>A2A</td>
+            <td>1280 x 720</td>
+            <td>2</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="structure" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Structure</p>
+        <h2>Sequence-level RGB, event, label, and synchronization files</h2>
+      </div>
+      <div class="grid three">
+        <article>
+          <h3>GAREUD-Real</h3>
+          <p>Each real-world sequence is stored as <code>GAREUD_R/GAREUD_R_xxxxxx/</code> with RGB frames in <code>rgbframe/</code>, one raw event-stream HDF5 file, calibration and synchronization information, and <code>labels.txt</code>.</p>
+        </article>
+        <article>
+          <h3>GAREUD-Sim</h3>
+          <p>Each synthetic sequence is stored as <code>GAREUD_S/GAREUD_S_xxxxxx/</code> with RGB frames in <code>images/</code>, event-frame representations in <code>event_frames/</code>, raw events in <code>events.h5</code>, and <code>labels.txt</code>.</p>
+        </article>
+        <article>
+          <h3>Labels</h3>
+          <p>Real-world labels use <code>timestamp class_id x_center y_center width height</code>. Synthetic labels use <code>frame_id class_id x_center y_center width height</code>. Bounding boxes are normalized.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="download" class="section split">
+      <div>
+        <p class="eyebrow">Download</p>
+        <h2>Public dataset release</h2>
+        <p>The GAREUD release is split into separate Google Drive folders for GAREUD-Real and GAREUD-Sim. The real-world subset is available now, and the synthetic subset link can be added when the GAREUD_S folder is published.</p>
+      </div>
+      <aside class="download-panel">
+        <a class="button primary wide" href="https://drive.google.com/drive/folders/1WSdUVY31Msf_oUpoDQa9QQLj8btxbZYy?usp=drive_link">Open GAREUD-Real</a>
+        <p>GAREUD-Sim: link to be added.</p>
+        <p>License: CC BY-NC 4.0</p>
+      </aside>
+    </section>
+
+    <section id="citation" class="section">
+      <div class="section-head">
+        <p class="eyebrow">Citation</p>
+        <h2>Cite GAREUD</h2>
+      </div>
+      <pre><code>@article{xia2026gareud,
+  title   = {Full-Stack UAV Detection Pipeline from Precise RGB--Event Sensing to Efficient Edge Processing},
+  author  = {Xia, Haoji and Liu, Siying and Jin, Jiaqi and Wang, Sihan and Huang, Tong and Han, Xujie and Wang, Zikai and Zhong, Yuxing and Zheng, Hanle and Cheng, Chen and Guo, Hao and Deng, Lei},
+  journal = {To appear},
+  year    = {2026}
+}</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>GAREUD is released for non-commercial research use under CC BY-NC 4.0.</p>
+  </footer>
+</body>
+</html>
