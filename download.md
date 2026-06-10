@@ -22,23 +22,26 @@ Google Drive link to be added.
 
 ```text
 GAREUD_R/
-  GAREUD_R_000001/
-    rgbframe/
-    20260104_144809.hdf5
-    calibration_info.txt
-    labels.txt
-    params.json
-  GAREUD_R_000002/
-  ...
+|-- GAREUD_R_000001/
+|   |-- rgbframe/
+|   |   `-- *.jpg
+|   |-- *.hdf5
+|   |-- calibration_info.txt
+|   |-- labels.txt
+|   `-- params.json
+|-- GAREUD_R_000002/
+`-- ...
 
 GAREUD_S/
-  GAREUD_S_000001/
-    images/
-    event_frames/
-    events.h5
-    labels.txt
-  GAREUD_S_000002/
-  ...
+|-- GAREUD_S_000001/
+|   |-- images/
+|   |   `-- *.png
+|   |-- event_frames/
+|   |   `-- *.png
+|   |-- events.h5
+|   `-- labels.txt
+|-- GAREUD_S_000002/
+`-- ...
 ```
 
 ## Annotation Format
