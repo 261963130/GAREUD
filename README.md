@@ -40,7 +40,7 @@ See [download.md](download.md) for recommended directory organization and integr
 GAREUD_R/
 |-- GAREUD_R_000001/
 |   |-- rgbframe/
-|   |   `-- *.jpg
+|   |   `-- <timestamp>.jpg
 |   |-- *.hdf5
 |   |-- calibration_info.txt
 |   |-- labels.txt
@@ -66,7 +66,7 @@ Each real-world sequence is stored as `GAREUD_R/GAREUD_R_xxxxxx/`.
 
 | Path | Description |
 |---|---|
-| `rgbframe/` | RGB frames associated with the synchronized labels. |
+| `rgbframe/` | RGB frames. File names are timestamps, for example `1445.414147568.jpg`. |
 | `*.hdf5` | Raw event stream recorded by the event camera. |
 | `calibration_info.txt` | Stereo rectification, calibration, and synchronization information. |
 | `labels.txt` | Bounding-box annotations paired with synchronized frames. |
