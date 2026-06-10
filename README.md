@@ -38,26 +38,26 @@ See [download.md](download.md) for recommended directory organization and integr
 
 ```text
 GAREUD_R/
-  GAREUD_R_000001/
-    rgbframe/
-      <timestamp>.jpg
-    <recording_time>.hdf5
-    calibration_info.txt
-    labels.txt
-    params.json
-  GAREUD_R_000002/
-  ...
+|-- GAREUD_R_000001/
+|   |-- rgbframe/
+|   |   `-- *.jpg
+|   |-- *.hdf5
+|   |-- calibration_info.txt
+|   |-- labels.txt
+|   `-- params.json
+|-- GAREUD_R_000002/
+`-- ...
 
 GAREUD_S/
-  GAREUD_S_000001/
-    images/
-      <frame_id>.png
-    event_frames/
-      <frame_id>.png
-    events.h5
-    labels.txt
-  GAREUD_S_000002/
-  ...
+|-- GAREUD_S_000001/
+|   |-- images/
+|   |   `-- *.png
+|   |-- event_frames/
+|   |   `-- *.png
+|   |-- events.h5
+|   `-- labels.txt
+|-- GAREUD_S_000002/
+`-- ...
 ```
 
 ### Real-world Sequence Files
@@ -66,7 +66,7 @@ Each real-world sequence is stored as `GAREUD_R/GAREUD_R_xxxxxx/`.
 
 | Path | Description |
 |---|---|
-| `rgbframe/` | RGB frames. File names are timestamps, for example `1445.414147568.jpg`. |
+| `rgbframe/` | RGB frames associated with the synchronized labels. |
 | `*.hdf5` | Raw event stream recorded by the event camera. |
 | `calibration_info.txt` | Stereo rectification, calibration, and synchronization information. |
 | `labels.txt` | Bounding-box annotations paired with synchronized frames. |
