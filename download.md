@@ -24,7 +24,7 @@ Google Drive link to be added.
 GAREUD_R/
 |-- GAREUD_R_000001/
 |   |-- rgbframe/
-|   |   `-- *.jpg
+|   |   `-- <timestamp>.jpg
 |   |-- *.hdf5
 |   |-- calibration_info.txt
 |   |-- labels.txt
