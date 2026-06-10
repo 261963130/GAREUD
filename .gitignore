@@ -1,0 +1,19 @@
+# OS files
+Thumbs.db
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Large local dataset files
+data/
+GAREUD/
+*.zip
+*.tar
+*.tar.gz
+*.h5
+*.mp4
+*.avi
