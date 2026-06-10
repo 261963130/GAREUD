@@ -118,8 +118,4 @@ The dataset is released under the [Creative Commons Attribution-NonCommercial 4.
 
 ## Contact
 
-For questions, please contact:
-
-- Chen Cheng: chengchen@tyut.edu.cn
-- Hao Guo: guohao@tyut.edu.cn
-- Lei Deng: leideng@mail.tsinghua.edu.cn
+For questions, please contact Haoji Xia at hjxia@link.tyut.edu.cn.
