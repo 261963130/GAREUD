@@ -1,8 +1,56 @@
-# GAREUD Refined RGB-DVS Dataset
+# GAREUD: Ground-Aerial RGB-Event UAV Dataset
 
-GAREUD is a synchronized RGB and event-camera dataset for UAV detection under diverse viewpoints, illumination conditions, backgrounds, and interference scenarios. Each sequence contains processed RGB frames, pre-rendered DVS frame images, and a processed Prophesee event stream.
+GAREUD is a large-scale RGB-Event UAV detection benchmark built for aligned multimodal sensing, small-target UAV detection, and efficient edge perception. It is part of the full-stack UAV detection pipeline described in our paper, **Full-Stack UAV Detection Pipeline from Precise RGB-Event Sensing to Efficient Edge Processing**, which connects hardware-level RGB-Event sensing, dataset construction, lightweight multimodal detection, and real-time deployment on edge devices.
 
-This release is a refined version of the original long recordings:
+RGB-Event fusion is promising for UAV detection because RGB cameras provide dense appearance and texture, while event cameras provide microsecond-level motion cues and high dynamic range. In practical long-range UAV detection, targets are often tiny, fast-moving, and observed under unstable illumination, background clutter, motion blur, overexposure, platform vibration, and rapidly changing viewpoints. GAREUD is designed to make these conditions available in a synchronized benchmark.
+
+## Project Highlights
+
+- **Precise RGB-Event sensing:** co-axial RGB and event-camera acquisition with hardware trigger synchronization.
+- **Real UAV scenarios:** ground-to-air and air-to-air viewpoints with diverse lighting, motion, background, and interference conditions.
+- **Small-target detection focus:** many UAV instances occupy only a small image area, matching realistic long-range detection.
+- **Refined release format:** each sequence provides processed RGB frames, pre-rendered DVS frame images, labels, metadata, and one continuous corrected DVS h5 file.
+- **Flexible event usage:** users can either use ready-to-load `dvs_frame/` images or reslice the continuous `dvs_h5/` event stream with their own temporal windows.
+- **Edge-oriented research context:** the dataset supports RGB-Event fusion models and real-time UAV detection pipelines.
+
+## Paper Context
+
+The complete pipeline in the paper contains three connected parts:
+
+1. **Sensing and dataset construction:** co-axial RGB-Event imaging and microsecond-level trigger synchronization are used to build GAREUD.
+2. **Multimodal detection:** ME-Net uses motion-aware event refinement, asymmetric cross-modal fusion, and adaptive multi-scale aggregation for efficient RGB-Event UAV detection.
+3. **Edge deployment:** the detection pipeline is deployed on NVIDIA Jetson AGX Orin for real-time UAV perception.
+
+This repository focuses on the dataset release and its processed RGB-DVS format. Model code, videos, and visual examples can be added later as separate sections.
+
+## Media
+
+Videos, teaser figures, and RGB-DVS visualization examples will be added here. Suggested future materials:
+
+- A teaser image showing the co-axial RGB-Event sensing setup and representative RGB/DVS pairs.
+- A short video showing ground-to-air and air-to-air detection scenes.
+- Example overlays of RGB frames, DVS frames, and bounding-box labels.
+
+## Download
+
+The real-world subset is available on Google Drive:
+
+[Download GAREUD-Real](https://drive.google.com/drive/folders/1WSdUVY31Msf_oUpoDQa9QQLj8btxbZYy?usp=drive_link)
+
+The synthetic subset and additional project assets will be released separately.
+
+## Dataset Overview
+
+| Subset | Domain | Viewpoints | Resolution | Duration | UAV types | Illumination |
+|---|---:|---:|---:|---:|---:|---:|
+| GAREUD-Real | Real-world | G2A and A2A | 1280 x 720 raw, 1024 x 576 refined ROI | 4.1 h | 4 | 10-160,000 lux |
+| GAREUD-Sim | Synthetic | A2A | 1280 x 720 | 14 min | 2 | Controlled lighting |
+
+The real-world subset is designed for natural sensing conditions, including background clutter, platform motion, vehicle interference, illumination changes, and small UAV targets. The synthetic subset complements the real data with controlled environments and lighting settings for robustness and sensitivity analysis.
+
+## Refined Real-World Release
+
+This README describes the refined real-world RGB-DVS release. It is derived from the original long recordings:
 
 - RGB frames are stereo-rectified, manually shifted, and cropped to a common ROI.
 - Event-camera coordinates are stereo-rectified and cropped to the same ROI.
@@ -15,7 +63,7 @@ This release is a refined version of the original long recordings:
 The dataset root contains one folder per recording sequence:
 
 ```text
-GAREUD_TODO/
+GAREUD_R/
 |-- README.md
 |-- GAREUD_R_000001/
 |   |-- rgb_todo/
@@ -494,7 +542,7 @@ from pathlib import Path
 import cv2
 import h5py
 
-seq = Path("GAREUD_TODO/GAREUD_R_000001")
+seq = Path("GAREUD_R/GAREUD_R_000001")
 
 # Read RGB frame
 rgb_path = seq / "rgb_todo" / "1415.670021592.jpg"
@@ -552,7 +600,7 @@ def exposure_pairs(trigger_events):
             start = None
     return pairs
 
-with h5py.File("GAREUD_TODO/GAREUD_R_000001/dvs_h5/20260104_144809.h5", "r") as f:
+with h5py.File("GAREUD_R/GAREUD_R_000001/dvs_h5/20260104_144809.h5", "r") as f:
     events = f["CD/events"]
     triggers = f["EXT_TRIGGER/events"][:]
     pairs = exposure_pairs(triggers)
@@ -567,4 +615,13 @@ with h5py.File("GAREUD_TODO/GAREUD_R_000001/dvs_h5/20260104_144809.h5", "r") as 
 
 ## Suggested Citation
 
-If you use this dataset, please cite the accompanying dataset paper or repository release.
+If you use GAREUD, please cite the accompanying dataset paper:
+
+```bibtex
+@article{xia2026gareud,
+  title   = {Full-Stack UAV Detection Pipeline from Precise RGB-Event Sensing to Efficient Edge Processing},
+  author  = {Xia, Haoji and Liu, Siying and Jin, Jiaqi and Wang, Sihan and Huang, Tong and Han, Xujie and Wang, Zikai and Zhong, Yuxing and Zheng, Hanle and Cheng, Chen and Guo, Hao and Deng, Lei},
+  journal = {To appear},
+  year    = {2026}
+}
+```
