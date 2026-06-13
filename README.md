@@ -33,9 +33,12 @@ Videos, teaser figures, and RGB-DVS visualization examples will be added here. S
 
 ## Download
 
-The real-world subset is available on Google Drive:
+The real-world subset is available in two Google Drive folders:
 
-[Download GAREUD-Real](https://drive.google.com/drive/folders/1WSdUVY31Msf_oUpoDQa9QQLj8btxbZYy?usp=drive_link)
+| Version | Description | Link |
+|---|---|---|
+| Raw recordings | Original long RGB and event-camera recordings with calibration, parameters, and labels | [Download raw GAREUD-Real](https://drive.google.com/drive/folders/1WSdUVY31Msf_oUpoDQa9QQLj8btxbZYy?usp=drive_link) |
+| Synchronized processed release | Rectified and ROI-cropped RGB frames, pre-rendered DVS frame images, continuous processed DVS h5 files, labels, and sequence metadata | [Download synchronized processed GAREUD-Real](https://drive.google.com/drive/folders/1sUcSeesOSm_48kB8NwUI_fUbOhFUaUQ1?usp=drive_link) |
 
 The synthetic subset and additional project assets will be released separately.
 
