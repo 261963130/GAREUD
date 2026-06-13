@@ -37,8 +37,8 @@ The real-world subset is available in two Google Drive folders:
 
 | Version | Description | Link |
 |---|---|---|
-| 未处理原始数据 | Original long RGB and event-camera recordings with calibration, parameters, and labels | [Google Drive](https://drive.google.com/drive/folders/1WSdUVY31Msf_oUpoDQa9QQLj8btxbZYy?usp=drive_link) |
-| 处理后同步数据 | Rectified and ROI-cropped RGB frames, pre-rendered DVS frame images, continuous processed DVS h5 files, labels, and sequence metadata | [Google Drive](https://drive.google.com/drive/folders/1sUcSeesOSm_48kB8NwUI_fUbOhFUaUQ1?usp=drive_link) |
+| Unprocessed raw data | Original long RGB and event-camera recordings with calibration, parameters, and labels | [Google Drive](https://drive.google.com/drive/folders/1WSdUVY31Msf_oUpoDQa9QQLj8btxbZYy?usp=drive_link) |
+| Synchronized processed data | Rectified and ROI-cropped RGB frames, pre-rendered DVS frame images, continuous processed DVS h5 files, labels, and sequence metadata | [Google Drive](https://drive.google.com/drive/folders/1sUcSeesOSm_48kB8NwUI_fUbOhFUaUQ1?usp=drive_link) |
 
 The synthetic subset and additional project assets will be released separately.
 
