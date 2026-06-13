@@ -63,7 +63,7 @@ This README describes the refined real-world RGB-DVS release. It is derived from
 
 ## Dataset Layout
 
-The dataset root contains one folder per recording sequence:
+The following layout describes the **Synchronized processed data** release. The unprocessed raw data folder keeps the original long recordings, raw h5 files, calibration files, parameters, and labels, while the synchronized processed release uses the refined structure below. Its dataset root contains one folder per recording sequence:
 
 ```text
 GAREUD_R/
