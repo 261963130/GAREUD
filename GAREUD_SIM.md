@@ -6,7 +6,7 @@ This document describes the **GAREUD-Sim** subset. GAREUD-Sim is a synthetic RGB
 
 | Version | Link |
 |---|---|
-| GAREUD-Sim | To be released |
+| GAREUD-Sim | [Google Drive](https://drive.google.com/drive/folders/1ZP1Kh1y9-mLzez1ypwR6dnOkoOyz2dBe?usp=drive_link) |
 
 ## Folder Layout
 
