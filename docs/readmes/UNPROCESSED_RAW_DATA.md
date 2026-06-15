@@ -1,6 +1,6 @@
 # Unprocessed Raw Data
 
-This document describes the **Unprocessed raw data** release of GAREUD-Real. This version keeps the original long RGB and event-camera recordings before rectification, ROI cropping, DVS-frame rendering, and synchronized processed packaging.
+This document describes the **Unprocessed raw data** release of GAREUD-Real. This version keeps the original RGB and event-camera recordings before rectification, ROI cropping, DVS-frame rendering, and synchronized processed packaging.
 
 Use this version if you need to reproduce the dataset construction pipeline, inspect the original recordings, rerun calibration or alignment, generate custom event representations, or apply your own temporal slicing strategy.
 

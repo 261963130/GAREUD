@@ -1,38 +1,31 @@
 # GAREUD: Ground-Aerial RGB-Event UAV Dataset
 
-GAREUD is a large-scale RGB-Event UAV detection benchmark for multimodal perception under ground-to-air and air-to-air viewpoints. It provides real-world and synthetic sequences with paired RGB data, event data, annotations, and sequence metadata for small-target UAV detection.
+GAREUD is a large-scale RGB-Event UAV detection benchmark for multimodal perception under ground-to-air and air-to-air viewpoints. It provides real-world and synthetic sequences with paired RGB data, event data, annotations, and sequence metadata for UAV detection.
 
 The dataset is built for challenging UAV scenarios where targets are small, fast-moving, and affected by illumination changes, motion blur, background clutter, platform motion, and viewpoint variation. GAREUD supports both ready-to-use RGB-DVS model training and lower-level research on RGB-Event alignment, event representation, and temporal slicing.
 
 ## Project Highlights
 
 - **RGB-Event UAV benchmark:** paired RGB and event data for UAV detection.
-- **Real and synthetic subsets:** real recordings for natural sensing conditions and simulation for controlled analysis.
+- **Real and synthetic subsets:** real recordings for natural sensing conditions and synthetic data for dataset expansion and controlled analysis.
 - **Multiple viewpoints:** ground-to-air and air-to-air scenarios.
-- **Small-target focus:** UAVs often occupy only a small fraction of the image.
 - **Flexible event data:** processed DVS frames are provided for frame-based use, while h5 event streams support custom temporal slicing.
 
 ## Paper Context
 
 GAREUD accompanies the paper **Full-Stack UAV Detection Pipeline from Precise RGB-Event Sensing to Efficient Edge Processing**. The paper studies RGB-Event sensing, dataset construction, multimodal detection, and edge deployment for UAV perception.
 
-This repository currently focuses on dataset release and documentation. Model code, videos, and visual examples can be added as separate project assets.
-
-## Media
-
-Videos, teaser figures, and RGB-DVS examples will be added here after public release.
+This repository currently focuses on dataset release and documentation.
 
 ## Download
 
-The real-world subset is available in two Google Drive folders:
+The dataset releases are available through the following Google Drive folders:
 
 | Version | Description | Link | Documentation |
 |---|---|---|---|
 | GAREUD-Real-Processed | processed RGB frames, DVS frames, DVS h5 files, labels, and sequence metadata | [Google Drive](https://drive.google.com/drive/folders/1sUcSeesOSm_48kB8NwUI_fUbOhFUaUQ1?usp=drive_link) | This page |
-| GAREUD-Real-Raw | Original long RGB and event-camera recordings with calibration, parameters, and labels | [Google Drive](https://drive.google.com/drive/folders/1WSdUVY31Msf_oUpoDQa9QQLj8btxbZYy?usp=drive_link) | [README](docs/readmes/UNPROCESSED_RAW_DATA.md) |
+| GAREUD-Real-Raw | Original RGB and event-camera recordings with calibration, parameters, and labels | [Google Drive](https://drive.google.com/drive/folders/1WSdUVY31Msf_oUpoDQa9QQLj8btxbZYy?usp=drive_link) | [README](docs/readmes/UNPROCESSED_RAW_DATA.md) |
 | GAREUD-Sim | Synthetic RGB frames, event-frame representations, event streams, labels, and distance metadata | [Google Drive](https://drive.google.com/drive/folders/1ZP1Kh1y9-mLzez1ypwR6dnOkoOyz2dBe?usp=drive_link) | [README](docs/readmes/GAREUD_SIM.md) |
-
-The synthetic subset and additional project assets will be released separately.
 
 ## Dataset Overview
 
@@ -45,7 +38,7 @@ The real-world subset is designed for natural sensing conditions, including back
 
 ## Refined Real-World Release
 
-This README describes the refined real-world RGB-DVS release. It is derived from the original long recordings:
+This README describes the refined real-world RGB-DVS release. It is derived from the original recordings:
 
 - RGB frames are stereo-rectified, manually shifted, and cropped to a common ROI.
 - Event-camera coordinates are stereo-rectified and cropped to the same ROI.
@@ -55,7 +48,7 @@ This README describes the refined real-world RGB-DVS release. It is derived from
 
 ## Dataset Layout
 
-The following layout describes the **Synchronized processed data** release. The unprocessed raw data folder keeps the original long recordings, raw h5 files, calibration files, parameters, and labels, while the synchronized processed release uses the refined structure below. Its dataset root contains one folder per recording sequence:
+The following layout describes the **Synchronized processed data** release. The unprocessed raw data folder keeps the original recordings, raw h5 files, calibration files, parameters, and labels, while the synchronized processed release uses the refined structure below. Its dataset root contains one folder per recording sequence:
 
 ```text
 GAREUD_R/
@@ -245,7 +238,7 @@ classes DJI Avata2
 
 ### `sequence_info.txt`
 
-Human-readable sequence metadata parsed from the paper table.
+Metadata file recording sequence-level labels and acquisition conditions.
 
 Example:
 
@@ -271,7 +264,7 @@ Fields:
 
 ### Optional Build Metadata: `params.json`
 
-Per-sequence alignment and ROI parameters used during dataset construction. These parameters may be distributed with the construction scripts or processing reports. If present, they describe how the released RGB images and event coordinates were produced.
+Per-sequence alignment and ROI parameters used during dataset construction. These parameters may be distributed with the construction scripts or processing reports. They describe how the released RGB images and event coordinates were produced.
 
 Example:
 
@@ -433,7 +426,7 @@ Processing convention:
 
 ### `EXT_TRIGGER/events`
 
-External trigger stream copied unchanged from the original h5.
+External trigger stream.
 
 HDF5 path:
 
