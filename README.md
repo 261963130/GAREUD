@@ -29,8 +29,8 @@ The real-world subset is available in two Google Drive folders:
 | Version | Description | Link | Documentation |
 |---|---|---|---|
 | GAREUD-Real-Processed | processed RGB frames, DVS frames, DVS h5 files, labels, and sequence metadata | [Google Drive](https://drive.google.com/drive/folders/1sUcSeesOSm_48kB8NwUI_fUbOhFUaUQ1?usp=drive_link) | This page |
-| GAREUD-Real-Raw | Original long RGB and event-camera recordings with calibration, parameters, and labels | [Google Drive](https://drive.google.com/drive/folders/1WSdUVY31Msf_oUpoDQa9QQLj8btxbZYy?usp=drive_link) | [README](UNPROCESSED_RAW_DATA.md) |
-| GAREUD-Sim | Synthetic RGB frames, event-frame representations, event streams, labels, and distance metadata | [Google Drive](https://drive.google.com/drive/folders/1ZP1Kh1y9-mLzez1ypwR6dnOkoOyz2dBe?usp=drive_link) | [README](GAREUD_SIM.md) |
+| GAREUD-Real-Raw | Original long RGB and event-camera recordings with calibration, parameters, and labels | [Google Drive](https://drive.google.com/drive/folders/1WSdUVY31Msf_oUpoDQa9QQLj8btxbZYy?usp=drive_link) | [README](docs/readmes/UNPROCESSED_RAW_DATA.md) |
+| GAREUD-Sim | Synthetic RGB frames, event-frame representations, event streams, labels, and distance metadata | [Google Drive](https://drive.google.com/drive/folders/1ZP1Kh1y9-mLzez1ypwR6dnOkoOyz2dBe?usp=drive_link) | [README](docs/readmes/GAREUD_SIM.md) |
 
 The synthetic subset and additional project assets will be released separately.
 
