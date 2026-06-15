@@ -1,35 +1,26 @@
 # GAREUD: Ground-Aerial RGB-Event UAV Dataset
 
-GAREUD is a large-scale RGB-Event UAV detection benchmark built for aligned multimodal sensing, small-target UAV detection, and efficient edge perception. It is part of the full-stack UAV detection pipeline described in our paper, **Full-Stack UAV Detection Pipeline from Precise RGB-Event Sensing to Efficient Edge Processing**, which connects hardware-level RGB-Event sensing, dataset construction, lightweight multimodal detection, and real-time deployment on edge devices.
+GAREUD is a large-scale RGB-Event UAV detection benchmark for multimodal perception under ground-to-air and air-to-air viewpoints. It provides real-world and synthetic sequences with paired RGB data, event data, annotations, and sequence metadata for small-target UAV detection.
 
-RGB-Event fusion is promising for UAV detection because RGB cameras provide dense appearance and texture, while event cameras provide microsecond-level motion cues and high dynamic range. In practical long-range UAV detection, targets are often tiny, fast-moving, and observed under unstable illumination, background clutter, motion blur, overexposure, platform vibration, and rapidly changing viewpoints. GAREUD is designed to make these conditions available in a synchronized benchmark.
+The dataset is built for challenging UAV scenarios where targets are small, fast-moving, and affected by illumination changes, motion blur, background clutter, platform motion, and viewpoint variation. GAREUD supports both ready-to-use RGB-DVS model training and lower-level research on RGB-Event alignment, event representation, and temporal slicing.
 
 ## Project Highlights
 
-- **Precise RGB-Event sensing:** co-axial RGB and event-camera acquisition with hardware trigger synchronization.
-- **Real UAV scenarios:** ground-to-air and air-to-air viewpoints with diverse lighting, motion, background, and interference conditions.
-- **Small-target detection focus:** many UAV instances occupy only a small image area, matching realistic long-range detection.
-- **Refined release format:** each sequence provides processed RGB frames, pre-rendered DVS frame images, labels, metadata, and one continuous corrected DVS h5 file.
-- **Flexible event usage:** users can either use ready-to-load `dvs_frame/` images or reslice the continuous `dvs_h5/` event stream with their own temporal windows.
-- **Edge-oriented research context:** the dataset supports RGB-Event fusion models and real-time UAV detection pipelines.
+- **RGB-Event UAV benchmark:** paired RGB and event data for UAV detection.
+- **Real and synthetic subsets:** real recordings for natural sensing conditions and simulation for controlled analysis.
+- **Multiple viewpoints:** ground-to-air and air-to-air scenarios.
+- **Small-target focus:** UAVs often occupy only a small fraction of the image.
+- **Flexible event data:** processed DVS frames are provided for frame-based use, while h5 event streams support custom temporal slicing.
 
 ## Paper Context
 
-The complete pipeline in the paper contains three connected parts:
+GAREUD accompanies the paper **Full-Stack UAV Detection Pipeline from Precise RGB-Event Sensing to Efficient Edge Processing**. The paper studies RGB-Event sensing, dataset construction, multimodal detection, and edge deployment for UAV perception.
 
-1. **Sensing and dataset construction:** co-axial RGB-Event imaging and microsecond-level trigger synchronization are used to build GAREUD.
-2. **Multimodal detection:** ME-Net uses motion-aware event refinement, asymmetric cross-modal fusion, and adaptive multi-scale aggregation for efficient RGB-Event UAV detection.
-3. **Edge deployment:** the detection pipeline is deployed on NVIDIA Jetson AGX Orin for real-time UAV perception.
-
-This repository focuses on the dataset release and its processed RGB-DVS format. Model code, videos, and visual examples can be added later as separate sections.
+This repository currently focuses on dataset release and documentation. Model code, videos, and visual examples can be added as separate project assets.
 
 ## Media
 
-Videos, teaser figures, and RGB-DVS visualization examples will be added here. Suggested future materials:
-
-- A teaser image showing the co-axial RGB-Event sensing setup and representative RGB/DVS pairs.
-- A short video showing ground-to-air and air-to-air detection scenes.
-- Example overlays of RGB frames, DVS frames, and bounding-box labels.
+Videos, teaser figures, and RGB-DVS examples will be added here after public release.
 
 ## Download
 
@@ -37,8 +28,9 @@ The real-world subset is available in two Google Drive folders:
 
 | Version | Description | Link | Documentation |
 |---|---|---|---|
-| GAREUD-Real-Processed | Rectified and ROI-cropped RGB frames, pre-rendered DVS frame images, continuous processed DVS h5 files, labels, and sequence metadata | [Google Drive](https://drive.google.com/drive/folders/1sUcSeesOSm_48kB8NwUI_fUbOhFUaUQ1?usp=drive_link) | This page |
+| GAREUD-Real-Processed | processed RGB frames, DVS frames, DVS h5 files, labels, and sequence metadata | [Google Drive](https://drive.google.com/drive/folders/1sUcSeesOSm_48kB8NwUI_fUbOhFUaUQ1?usp=drive_link) | This page |
 | GAREUD-Real-Raw | Original long RGB and event-camera recordings with calibration, parameters, and labels | [Google Drive](https://drive.google.com/drive/folders/1WSdUVY31Msf_oUpoDQa9QQLj8btxbZYy?usp=drive_link) | [README](UNPROCESSED_RAW_DATA.md) |
+| GAREUD-Sim | Synthetic RGB frames, event-frame representations, event streams, labels, and distance metadata | To be released | [README](GAREUD_SIM.md) |
 
 The synthetic subset and additional project assets will be released separately.
 
