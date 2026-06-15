@@ -37,8 +37,8 @@ The real-world subset is available in two Google Drive folders:
 
 | Version | Description | Link | Documentation |
 |---|---|---|---|
-| Unprocessed raw data | Original long RGB and event-camera recordings with calibration, parameters, and labels | [Google Drive](https://drive.google.com/drive/folders/1WSdUVY31Msf_oUpoDQa9QQLj8btxbZYy?usp=drive_link) | [README](UNPROCESSED_RAW_DATA.md) |
-| Synchronized processed data | Rectified and ROI-cropped RGB frames, pre-rendered DVS frame images, continuous processed DVS h5 files, labels, and sequence metadata | [Google Drive](https://drive.google.com/drive/folders/1sUcSeesOSm_48kB8NwUI_fUbOhFUaUQ1?usp=drive_link) | This page |
+| GAREUD-Real-Processed | Rectified and ROI-cropped RGB frames, pre-rendered DVS frame images, continuous processed DVS h5 files, labels, and sequence metadata | [Google Drive](https://drive.google.com/drive/folders/1sUcSeesOSm_48kB8NwUI_fUbOhFUaUQ1?usp=drive_link) | This page |
+| GAREUD-Real-Raw | Original long RGB and event-camera recordings with calibration, parameters, and labels | [Google Drive](https://drive.google.com/drive/folders/1WSdUVY31Msf_oUpoDQa9QQLj8btxbZYy?usp=drive_link) | [README](UNPROCESSED_RAW_DATA.md) |
 
 The synthetic subset and additional project assets will be released separately.
 
