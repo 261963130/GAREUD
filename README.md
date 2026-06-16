@@ -4,6 +4,8 @@ GAREUD is a large-scale RGB-Event UAV detection benchmark for multimodal percept
 
 The dataset is built for challenging UAV scenarios where targets are small, fast-moving, and affected by illumination changes, motion blur, background clutter, platform motion, and viewpoint variation. GAREUD supports both ready-to-use RGB-DVS model training and lower-level research on RGB-Event alignment, event representation, and temporal slicing.
 
+![GAREUD overview](assets/gareud_overview.png)
+
 ## Project Highlights
 
 - **RGB-Event UAV benchmark:** paired RGB and event data for UAV detection.
