@@ -38,6 +38,8 @@ The dataset releases are available through the following Google Drive folders:
 
 The real-world subset is designed for natural sensing conditions, including background clutter, platform motion, vehicle interference, illumination changes, and small UAV targets. The synthetic subset complements the real data with controlled environments and lighting settings for robustness and sensitivity analysis.
 
+The sequence-level train/test split for `GAREUD-Real` is documented in [GAREUD_REAL_SPLIT.md](docs/readmes/GAREUD_REAL_SPLIT.md).
+
 ## Refined Real-World Release
 
 This README describes the refined real-world RGB-DVS release. It is derived from the original recordings:
