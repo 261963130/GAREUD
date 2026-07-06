@@ -55,5 +55,6 @@ This file records the sequence-level train/test split for the real-world GAREUD 
 ## Notes
 
 - Each sequence folder is assigned entirely to one split.
+- `GAREUD_R_000004` is split 5:5 for train/validation because it is the only sequence containing DJI Air 3 data.
 - Image counts are recorded per released sequence folder.
 - The processed real-world dataset layout is documented in the root README.
